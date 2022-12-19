@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "devxes",
+  "info": {
+    "name": "devx"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image_cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "start_date": {
+      "type": "datetime"
+    },
+    "devx_members": {
+      "via": "devx",
+      "collection": "devx-member"
+    }
+  }
+}

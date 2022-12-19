@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/devx-members",
+      "handler": "devx-member.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/devx-members/count",
+      "handler": "devx-member.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/devx-members/:id",
+      "handler": "devx-member.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/devx-members",
+      "handler": "devx-member.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/devx-members/:id",
+      "handler": "devx-member.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/devx-members/:id",
+      "handler": "devx-member.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

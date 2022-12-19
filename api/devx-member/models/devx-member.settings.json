@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "devx_members",
+  "info": {
+    "name": "devx-member"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "member_name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "devx": {
+      "unique": true,
+      "model": "devx",
+      "via": "devx_members"
+    },
+    "present_name": {
+      "type": "string",
+      "required": true
+    },
+    "present_time": {
+      "type": "time",
+      "default": "00:15:00"
+    },
+    "present_cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}
